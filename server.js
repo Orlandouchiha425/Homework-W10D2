@@ -14,4 +14,9 @@ app.get('/',(req,res)=>{
     res.send(`Wow! Hello there, ${req.params.name}`)
 })
 
+app.get('/tip/:total/:tipPercentage',(req,res)=>{
+res.send(`${req.params.total*req.params.tipPercentage/100}`)
 
+})
+
+// :total:tipPercentage
